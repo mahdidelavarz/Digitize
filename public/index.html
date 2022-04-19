@@ -1,0 +1,146 @@
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digitize App - Shop</title>
+  <link rel="stylesheet" href="./build/tailwind.css">
+</head>
+
+<body class="bg-stone-200">
+
+  <!-- App Bar -->
+  <section class="flex items-center justify-between mt-10  px-6 mb-6">
+    <div class="cursor-pointer">Digitize</div>
+    <div class="text-lg font-bold text-slate-800">ساعت هوشمند</div>
+    <div class="h-7 w-7 md:h-8 md:w-8 lg:w-10 lg:h-10  bg-white rounded-lg  shadow-xl flex justify-center items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="cursor-pointer h-5 w-5 lg:h-6 lg:w-6 stroke-gray-500" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- Filter - sort mobile section -->
+  <section class="flex justify-between items-center px-6 flex-row-reverse w-full mb-9">
+    <div class=" bg-white flex  justify-center items-center w-1/2 p-2 rounded-md mr-1 cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-gray-400 md:text-sm lg:text-base" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+      </svg>
+      <span class="text-xs mx-1 md:text-sm lg:text-base">فیلتر : برند اپل</span>
+    </div>
+    <div class=" bg-white flex  justify-center items-center p-2 w-1/2 rounded-md ml-1 cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-orange-600 md:text-sm lg:text-base" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
+      </svg>
+      <span class="text-xs mx-1 md:text-sm lg:text-base">محبوب ترین محصول</span>
+    </div>
+  </section>
+
+
+  <section class="grid grid-cols-12 md:grid-rows-[100px_minmax(500px,_1fr)] md:gap-4 p-3 md:px-6">
+    <!-- !.................side bar.................... -->
+    <section class=" hidden md:flex bg-purple-300 col-span-3 row-span-2 rounded-lg  justify-center items-center">sideBar</section>
+    <!-- !...................sort section............... -->
+    <section class="hidden md:flex bg-red-300 col-span-9 rounded-lg justify-center items-center ">sort section</section>
+    <!-- !...................product section............. -->
+    <section class=" bg-stone-200  col-span-12 md:col-span-9 rounded-lg pt-3">
+
+      <div x-data="{ products:[
+          {id: 1 , title: 'ساعت هوشمند اپل 4' , price: '1,250,000 تومان'} ,
+          {id: 2 , title: 'ساعت هوشمند اپل 2' , price: '2,250,000 تومان'} ,
+          {id: 3 , title: 'ساعت هوشمند اپل 8' , price: '3,250,000 تومان'} ,
+          {id: 4 , title: 'ساعت هوشمند اپل 6' , price: '2,750,000 تومان'} ,
+          {id: 5 , title: 'ساعت هوشمند اپل 9' , price: '4,050,000 تومان'} ,
+          {id: 6 , title: 'ساعت هوشمند اپل 5' , price: '1,600,000 تومان'} ,
+          {id: 7 , title: 'ساعت هوشمند اپل 10' , price: '8,250,000 تومان'},
+          {id: 8 , title: 'ساعت هوشمند اپل 7' , price: '5,700,000 تومان'} ,
+          {id: 9 , title: 'ساعت هوشمند اپل 11' , price: '9,850,000 تومان'},
+          {id: 10 , title: 'ساعت هوشمند اپل 11' , price: '9,850,000 تومان'},
+          {id: 11 , title: 'ساعت هوشمند اپل 11' , price: '9,850,000 تومان'},
+          {id: 12 , title: 'ساعت هوشمند اپل 11' , price: '9,850,000 تومان'},
+        ]}" class="grid gap-y-7 gap-x-4 mb-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-3 md:px-0">
+      
+        <!-- *..................................................................................single product............................. -->
+        <template x-for="prod in products" :key="prod.id">
+          <div class="bg-white px-2 rounded-lg h-auto shadow-md shadow-gray-400 pb-4">
+            <!-- img box -->
+            <div class="relative bg-slate-200 rounded-lg mt-2 h-auto">
+              <img src="../assets/imsges/watch.png" alt="apple-watch" class="object-cover">
+              <div
+                class="flex justify-center items-center w-6 h-6 rounded-full bg-gray-300 absolute top-2 right-2 md:top-4 md:right-4 cursor-pointer md:w-7 md:h-7">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-red-600 md:w-5 md:h-5" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </div>
+            </div>
+            <!-- series box -->
+            <div x-data="{color:'orange'}" class="flex justify-end items-center relative w-full h-6  my-2">
+              <p class="text-right mr-2 text-gray-400 text-xs absolute top-1 right-3 md:text-sm">Apple</p>
+              <span @click="color = 'orange'" :class="color === 'orange' ? 'ring-2 ring-orange-400' : '' "
+                class=" w-6 h-6 md:w-7 md:h-7 flex justify-center items-center bg-orange-700 rounded-full absolute top-1 left-0 cursor-pointer  border-2  border-white z-50 ">
+                <svg x-show="color === 'orange'" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-white text-white"
+                  viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+              <span @click="color = 'purple'" :class="color === 'purple' ? 'ring-2 ring-purple-400' : '' "
+                class="bg-purple-700  w-6 h-6 md:w-7 md:h-7 flex justify-center items-center rounded-full absolute top-1 left-5 cursor-pointer  border-2 border-white z-40 ">
+                <svg x-show="color === 'purple'" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-white text-white"
+                  viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+              <span @click="color = 'blue'" :class="color === 'blue' ? 'ring-2 ring-blue-400' : '' "
+                class=" bg-blue-700  w-6 h-6 md:w-7 md:h-7 flex justify-center items-center   rounded-full absolute top-1 left-10 cursor-pointer border-2 border-white z-30">
+                <svg x-show="color === 'blue'" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-white text-white"
+                  viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+              <span @click="color = 'yellow'" :class="color === 'yellow' ? 'ring-2 ring-yellow-600' : '' "
+                class="bg-yellow-600  w-6 h-6 md:w-7 md:h-7 flex justify-center items-center rounded-full absolute top-1 left-[3.75rem] cursor-pointer  border-2 border-white z-20">
+                <svg x-show="color === 'yellow'" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-white text-white"
+                  viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+            </div>
+            <!-- details box -->
+            <div class="flex flex-col text-sm">
+              <span x-text="prod.title" class="py-2 text-sm text-right md:text-sm lg:text-base"></span>
+              <span x-text="prod.price" class="text-left text-orange-600 pb-2 md:text-sm lg:text-base"></span>
+            </div>
+            <!-- shop box -->
+            <div class="flex justify-center items-center w-12/12 border-t-2 px-2">
+              <button
+                class="p-3 text-sm text-orange-800 hover:bg-orange-400 hover:text-stone-200 flex flex-1 justify-center items-center rounded-md transition-all transation ease-linear duration-300 md:text-sm lg:text-base">
+                مشاهده و سفارش
+              </button>
+            </div>
+          </div>
+        </template>
+      </div>
+
+
+    </section>
+  </section>
+ 
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+
+</html>
