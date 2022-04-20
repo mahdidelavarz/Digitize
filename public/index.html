@@ -15,15 +15,15 @@
     <div class="cursor-pointer">Digitize</div>
     <div class="text-lg font-bold text-slate-800">ساعت هوشمند</div>
     <div class="h-7 w-7 md:h-8 md:w-8 lg:w-10 lg:h-10  bg-white rounded-lg  shadow-xl flex justify-center items-center">
-      <svg xmlns="http://www.w3.org/2000/svg" class="cursor-pointer h-5 w-5 lg:h-6 lg:w-6 stroke-gray-500" fill="none" viewBox="0 0 24 24"
-        stroke="currentColor" stroke-width="2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="cursor-pointer h-5 w-5 lg:h-6 lg:w-6 stroke-gray-500" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
       </svg>
     </div>
   </section>
 
   <!-- Filter - sort mobile section -->
-  <section class="flex justify-between items-center px-6 flex-row-reverse w-full mb-9">
+  <section class="flex md:hidden justify-between items-center px-6 flex-row-reverse w-full mb-9">
     <div class=" bg-white flex  justify-center items-center w-1/2 p-2 rounded-md mr-1 cursor-pointer">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-gray-400 md:text-sm lg:text-base" fill="none"
         viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -42,11 +42,133 @@
   </section>
 
 
-  <section class="grid grid-cols-12 md:grid-rows-[100px_minmax(500px,_1fr)] md:gap-4 p-3 md:px-6">
+  <section class="grid grid-cols-12 md:grid-rows-[50px_minmax(500px,_1fr)] md:gap-4 p-3 md:px-6">
     <!-- !.................side bar.................... -->
-    <section class=" hidden md:flex bg-purple-300 col-span-3 row-span-2 rounded-lg  justify-center items-center">sideBar</section>
+
+    <section class=" hidden md:block bg-stone-200 col-span-3 row-span-2 rounded-lg  ">
+      <div class="bg-white w-full h-3/6 rounded-xl">
+        <div class="pt-6 px-6 text-orange-500 text-base"> دسته بندی </div>
+        <ul class="px-8 py-3 ">
+          <li class="py-1 flex">
+            <div class="w-5 h-5 rounded-full bg-gray-300 relative ml-4">
+              <svg class="h-6 w-8 stroke-orange-400 absolute top-1.5 -left-3" width="24" height="24" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" />
+                <rect x="7" y="4" width="10" height="16" rx="1" />
+                <line x1="11" y1="5" x2="13" y2="5" />
+                <line x1="12" y1="17" x2="12" y2="17.01" />
+              </svg>
+            </div>
+            <span class="cursor-pointer hover:text-gray-500"> تلفن همراه </span>
+          </li>
+          <li class="py-1 flex">
+            <div class=" w-5 h-5 rounded-full bg-gray-300 relative ml-4">
+              <svg class="h-6 w-8 stroke-orange-400 absolute top-1.5 -left-3" width="24" height="24" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" />
+                <line x1="3" y1="19" x2="21" y2="19" />
+                <rect x="5" y="6" width="14" height="10" rx="1" />
+              </svg>
+            </div>
+            <span class="cursor-pointer hover:text-gray-500"> لپ تاپ</span>
+          </li>
+          <li class="py-1 flex">
+            <div class="w-5 h-5 rounded-full bg-gray-300 relative ml-4">
+              <svg class="h-6 w-8 stroke-orange-400 absolute top-1.5 -left-3" width="24" height="24" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" />
+                <rect x="6" y="6" width="12" height="12" rx="3" />
+                <path d="M9 18v3h6v-3" />
+                <path d="M9 6v-3h6v3" />
+              </svg>
+            </div>
+            <span class="cursor-pointer hover:text-gray-500">ساعت هوشمند</span>
+          </li>
+        </ul>
+
+        <div class="pt-6 px-6 text-orange-500 text-base"> فیلتر</div>
+        <div class="pt-6 px-6 text-orange-500 text-base flex items-center justify-between">
+          <span class="text-gray-500">برند محصول</span>
+          <svg class="h-4 w-4 text-red-500 cursor-pointer " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15" />
+          </svg>
+        </div>
+        <ul class="px-8 py-3 ">
+          <li class="py-1 flex">
+            <div class="w-4 h-4 border bg-stone-200 border-orange-300 rounded-sm ml-2 cursor-pointer"></div>
+
+
+            <span class="cursor-pointer"> اپل</span>
+          </li>
+          <li class="py-1 flex">
+            <div class="w-4 h-4 border bg-stone-200 border-orange-300 rounded-sm ml-2 cursor-pointer"></div>
+            <span class="cursor-pointer"> سامسونگ</span>
+          </li>
+          <li class="py-1 flex">
+            <div class="w-4 h-4 border bg-stone-200 border-orange-300 rounded-sm ml-2 cursor-pointer"></div>
+            <span class="cursor-pointer">شیایومی</span>
+          </li>
+          <li class="py-1 flex">
+            <div class="w-4 h-4 border bg-stone-200 border-orange-300 rounded-sm ml-2 cursor-pointer"></div>
+            <span class="cursor-pointer">هواوی</span>
+          </li>
+        </ul>
+
+        <div class="pt-10 px-6 text-gray-500 text-base flex items-center justify-between">
+          <span>محدوده قیمت</span>
+        <svg class="w-4 h-4 border bg-stone-200  rounded-sm ml-2 cursor-pointer" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" />
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+        </div>
+
+
+        <div class="pt-6 px-6 text-gray-500 text-base flex items-center justify-between">
+          <span>رنگ محصول</span>
+        <svg class="w-4 h-4 border bg-stone-200  rounded-sm ml-2 cursor-pointer" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" />
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+        </div>
+      </div>
+    </section>
+
     <!-- !...................sort section............... -->
-    <section class="hidden md:flex bg-red-300 col-span-9 rounded-lg justify-center items-center ">sort section</section>
+
+    <section class="hidden md:flex bg-white col-span-9 rounded-lg justify-center items-center ">
+      <div x-data="{sort : 1 , activeClass : 'text-gray-800 font-bold'}" class=" w-full h-full flex items-center px-4 ">
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 lg:h-7 lg:w-7 stroke-stone-100 bg-red-300 md:text-sm lg:text-base p-1 rounded-sm hover:bg-red-200 transation-all duration-200"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
+          </svg>
+        </button>
+        <button @click="sort = 1" :class=" sort === 1 ? activeClass : '' "
+          class="p-1 text-xs lg:text-sm lg:mx-2 text-gray-400 relative">
+          <span>محبوب ترین محصول</span>
+          <span x-show=" sort===1 " class="w-1 h-1 rounded-full absolute top-1 -left-1 bg-red-600"></span>
+        </button>
+        <button @click="sort = 2" :class=" sort === 2 ? activeClass : '' "
+          class="p-3 text-xs lg:text-sm lg:mx-3 text-gray-400 relative">
+          <span>گران ترین محصول</span>
+          <span x-show=" sort===2 " class="w-1 h-1 rounded-full absolute left-0 bg-red-600"></span>
+        </button>
+        <button @click="sort = 3" :class=" sort === 3 ? activeClass : '' "
+          class="p-3 text-xs lg:text-sm lg:mx-3 text-gray-400 relative">
+          <span>ارزان ترین محصول</span>
+          <span x-show=" sort===3 " class="w-1 h-1 rounded-full absolute left-0 bg-red-600"></span>
+        </button>
+        <button @click="sort = 4" :class=" sort === 4 ? activeClass : '' "
+          class="p-3 text-xs lg:text-sm lg:mx-3 text-gray-400 relative">
+          <span>پربازدید ترین محصول</span>
+          <span x-show=" sort===4 " class="w-1 h-1 rounded-full absolute  left-0 bg-red-600"></span>
+        </button>
+      </div>
+    </section>
     <!-- !...................product section............. -->
     <section class=" bg-stone-200  col-span-12 md:col-span-9 rounded-lg pt-3">
 
@@ -64,7 +186,7 @@
           {id: 11 , title: 'ساعت هوشمند اپل 11' , price: '9,850,000 تومان'},
           {id: 12 , title: 'ساعت هوشمند اپل 11' , price: '9,850,000 تومان'},
         ]}" class="grid gap-y-7 gap-x-4 mb-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-3 md:px-0">
-      
+
         <!-- *..................................................................................single product............................. -->
         <template x-for="prod in products" :key="prod.id">
           <div class="bg-white px-2 rounded-lg h-auto shadow-md shadow-gray-400 pb-4">
@@ -72,8 +194,8 @@
             <div class="relative bg-slate-200 rounded-lg mt-2 h-auto">
               <img src="../assets/imsges/watch.png" alt="apple-watch" class="object-cover">
               <div
-                class="flex justify-center items-center w-6 h-6 rounded-full bg-gray-300 absolute top-2 right-2 md:top-4 md:right-4 cursor-pointer md:w-7 md:h-7">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-red-600 md:w-5 md:h-5" fill="none"
+                class="flex justify-center items-center w-6 h-6 rounded-full bg-gray-300 absolute top-2 right-2   cursor-pointer md:w-6 md:h-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4  stroke-red-600 md:w-5 md:h-5" fill="none"
                   viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round"
                     d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -84,36 +206,36 @@
             <div x-data="{color:'orange'}" class="flex justify-end items-center relative w-full h-6  my-2">
               <p class="text-right mr-2 text-gray-400 text-xs absolute top-1 right-3 md:text-sm">Apple</p>
               <span @click="color = 'orange'" :class="color === 'orange' ? 'ring-2 ring-orange-400' : '' "
-                class=" w-6 h-6 md:w-7 md:h-7 flex justify-center items-center bg-orange-700 rounded-full absolute top-1 left-0 cursor-pointer  border-2  border-white z-50 ">
-                <svg x-show="color === 'orange'" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-white text-white"
-                  viewBox="0 0 20 20" fill="currentColor">
+                class=" w-6 h-6 lg:w-7 lg:h-7 flex justify-center items-center bg-orange-700 rounded-full absolute top-1 left-0 cursor-pointer  border-2  border-white z-50 ">
+                <svg x-show="color === 'orange'" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 stroke-white text-white" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd"
                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                     clip-rule="evenodd" />
                 </svg>
               </span>
               <span @click="color = 'purple'" :class="color === 'purple' ? 'ring-2 ring-purple-400' : '' "
-                class="bg-purple-700  w-6 h-6 md:w-7 md:h-7 flex justify-center items-center rounded-full absolute top-1 left-5 cursor-pointer  border-2 border-white z-40 ">
-                <svg x-show="color === 'purple'" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-white text-white"
-                  viewBox="0 0 20 20" fill="currentColor">
+                class="bg-purple-700  w-6 h-6 lg:w-7 lg:h-7 flex justify-center items-center rounded-full absolute top-1 left-5 cursor-pointer  border-2 border-white z-40 ">
+                <svg x-show="color === 'purple'" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 stroke-white text-white" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd"
                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                     clip-rule="evenodd" />
                 </svg>
               </span>
               <span @click="color = 'blue'" :class="color === 'blue' ? 'ring-2 ring-blue-400' : '' "
-                class=" bg-blue-700  w-6 h-6 md:w-7 md:h-7 flex justify-center items-center   rounded-full absolute top-1 left-10 cursor-pointer border-2 border-white z-30">
-                <svg x-show="color === 'blue'" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-white text-white"
-                  viewBox="0 0 20 20" fill="currentColor">
+                class=" bg-blue-700  w-6 h-6 lg:w-7 lg:h-7 flex justify-center items-center   rounded-full absolute top-1 left-10 cursor-pointer border-2 border-white z-30">
+                <svg x-show="color === 'blue'" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 stroke-white text-white" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd"
                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                     clip-rule="evenodd" />
                 </svg>
               </span>
               <span @click="color = 'yellow'" :class="color === 'yellow' ? 'ring-2 ring-yellow-600' : '' "
-                class="bg-yellow-600  w-6 h-6 md:w-7 md:h-7 flex justify-center items-center rounded-full absolute top-1 left-[3.75rem] cursor-pointer  border-2 border-white z-20">
-                <svg x-show="color === 'yellow'" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-white text-white"
-                  viewBox="0 0 20 20" fill="currentColor">
+                class="bg-yellow-600  w-6 h-6 lg:w-7 lg:h-7 flex justify-center items-center rounded-full absolute top-1 left-[3.75rem] cursor-pointer  border-2 border-white z-20">
+                <svg x-show="color === 'yellow'" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 stroke-white text-white" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd"
                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                     clip-rule="evenodd" />
@@ -139,7 +261,7 @@
 
     </section>
   </section>
- 
+
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
 
