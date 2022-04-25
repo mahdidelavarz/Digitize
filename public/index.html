@@ -46,103 +46,239 @@
     <!-- !.................side bar.................... -->
 
     <section class=" hidden md:block bg-stone-200 col-span-3 row-span-2 rounded-lg  ">
-      <div class="bg-white w-full h-3/6 rounded-xl">
-        <div class="pt-6 px-6 text-orange-500 text-base"> دسته بندی </div>
-        <ul class="px-8 py-3 ">
-          <li class="py-1 flex">
-            <div class="w-5 h-5 rounded-full bg-gray-300 relative ml-4">
-              <svg class="h-6 w-8 stroke-orange-400 absolute top-1.5 -left-3" width="24" height="24" viewBox="0 0 24 24"
-                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <div class="bg-white w-full pt-10 pb-28 rounded-xl ">
+        <div class="pt-6 lg:px-6 px-3 text-orange-500 lg:text-base text-sm"> دسته بندی </div>
+        <ul class="pl-2 pr-4 lg:px-8 py-3 ">
+          <li class=" flex flex-1">
+            <div class="w-3 h-3 lg:w-5 lg:h-5 rounded-full bg-gray-300 relative ml-4">
+              <svg class="h-5 w-6 lg:w-8 lg:h-6 stroke-orange-400 absolute lg:top-1.5 lg:-left-3" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" />
                 <rect x="7" y="4" width="10" height="16" rx="1" />
                 <line x1="11" y1="5" x2="13" y2="5" />
                 <line x1="12" y1="17" x2="12" y2="17.01" />
               </svg>
             </div>
-            <span class="cursor-pointer hover:text-gray-500"> تلفن همراه </span>
+            <a href="#"
+              class="cursor-pointer hover:bg-stone-200 flex flex-1 p-2 rounded-md text-gray-700 transition-all duration-500 text-xs lg:text-sm">
+              تلفن همراه </a>
           </li>
-          <li class="py-1 flex">
-            <div class=" w-5 h-5 rounded-full bg-gray-300 relative ml-4">
-              <svg class="h-6 w-8 stroke-orange-400 absolute top-1.5 -left-3" width="24" height="24" viewBox="0 0 24 24"
-                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <li class=" flex  flex-1">
+            <div class=" lg:w-5 lg:h-5 w-3.5 h-3.5 rounded-full bg-gray-300 relative ml-4">
+              <svg class="lg:h-6 lg:w-8 w-6 h-5 stroke-orange-400 absolute lg:top-1.5 lg:-left-3" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" />
                 <line x1="3" y1="19" x2="21" y2="19" />
                 <rect x="5" y="6" width="14" height="10" rx="1" />
               </svg>
             </div>
-            <span class="cursor-pointer hover:text-gray-500"> لپ تاپ</span>
+            <a href="#"
+              class="cursor-pointer hover:bg-stone-200 flex flex-1 p-2  rounded-md text-gray-700 transition-all duration-500 text-xs lg:text-sm">
+              لپ تاپ</a>
           </li>
-          <li class="py-1 flex">
-            <div class="w-5 h-5 rounded-full bg-gray-300 relative ml-4">
-              <svg class="h-6 w-8 stroke-orange-400 absolute top-1.5 -left-3" width="24" height="24" viewBox="0 0 24 24"
-                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <li class="flex  flex-1">
+            <div class="lg:w-5 lg:h-5 w-3 h-3 rounded-full bg-gray-300 relative ml-4">
+              <svg class="lg:h-6 lg:w-8 h-5 w-6 stroke-orange-400 absolute lg:top-1.5 lg:-left-3" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" />
                 <rect x="6" y="6" width="12" height="12" rx="3" />
                 <path d="M9 18v3h6v-3" />
                 <path d="M9 6v-3h6v3" />
               </svg>
             </div>
-            <span class="cursor-pointer hover:text-gray-500">ساعت هوشمند</span>
+            <a href="#"
+              class="cursor-pointer hover:bg-stone-200 flex flex-1 p-2 rounded-md text-gray-700 transition-all duration-500 text-xs lg:text-sm">ساعت
+              هوشمند</a>
           </li>
         </ul>
+        <!-- *         filters           -->
+        <div class="">
+          <div class=" pt-14 lg:px-6 px-3 text-orange-500 lg:text-base text-sm"> فیلتر</div>
+          <!--!                                 Acc No 1                       -->
+          <div x-data="{isOpenBrand : true , active: 'rotate-180' }" class="flex flex-col">
+            <!--!                    Acc #1 header                   -->
+            <div @click="isOpenBrand = !isOpenBrand" class="pt-6 px-2 lg:px-4 text-orange-500 text-base flex justify-start items-between flex-1 flex-col">
+              <div class="flex flex-1 items-center">
+                <div class="lg:w-4 lg:h-4 w-3 h-3 rounded-full bg-gray-200 relative ml-4 items-center ">
+                  <svg class="lg:h-5 lg:w-5  h-4 w-5 stroke-orange-400 absolute lg:top-1 lg:-left-3 top-0 right-[3px]"
+                    width="24" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" />
+                    <path d="M3 21v-13l9-4l9 4v13" />
+                    <path d="M13 13h4v8h-10v-6h6" />
+                    <path d="M13 21v-9a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1v3" />
+                  </svg>
+                </div>
+                <span
+                  class="text-gray-500 flex flex-1 px-3 w-full h-10 hover:bg-slate-200 rounded-md justify-between items-center text-sm lg:text-base mt-2 trasation-all duration-300 cursor-pointer">برند
+                  محصول
+                  <svg :class="!isOpenBrand ? 'rotate-[538deg]' : '' " class="h-3 w-3 lg:w-4 lg:h-4 text-red-500 cursor-pointer transation-all duration-700 " viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="18 15 12 9 6 15" />   
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <!--!                    Acc #1 content                  -->
+            <div x-show="isOpenBrand === true" class="flex flex-1">
+              <ul x-data='{sort: 1 ,active:"bg-orange-300" ,acFont:"text-orange-900"}' class="px-12 py-3">
+                <li class="py-1 flex">
+                  <div @click="sort = 1" :class="sort === 1 ? active : '' "
+                    class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
+                  <span @click="sort = 1" :class="sort === 1 ? acFont : '' "
+                    class="cursor-pointer text-gray-700 text-xs lg:text-sm ">
+                    اپل</span>
+                </li>
+                <li class="py-1 flex">
+                  <div @click="sort = 2" :class="sort ===2 ? active : '' "
+                    class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
+                  <span @click="sort = 2" :class="sort === 2 ? acFont : '' "
+                    class="cursor-pointer text-gray-700 text-xs lg:text-sm ">
+                    سامسونگ</span>
+                </li>
+                <li class="py-1 flex">
+                  <div @click="sort = 3" :class="sort ===3 ? active : '' "
+                    class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
+                  <span @click="sort = 3" :class="sort === 3 ? acFont : '' "
+                    class="cursor-pointer text-gray-700 text-xs lg:text-sm ">شیایومی</span>
+                </li>
+                <li class="py-1 flex">
+                  <div @click="sort = 4" :class="sort === 4 ? active : '' "
+                    class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
+                  <span @click="sort = 4" :class="sort === 4 ? acFont : '' "
+                    class="cursor-pointer text-gray-700 text-xs lg:text-sm ">هواوی</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--!                                    Acc no 2                      -->
+          <div  x-data="{isOpenBrand : true , active: 'rotate-180' }" class="flex flex-col">
+          <!--!                    Acc #2 header                   -->
+          <div @click="isOpenBrand = !isOpenBrand"
+            class="pt-6 px-2 lg:px-4 text-orange-500 text-base flex justify-start items-between flex-1 flex-col">
+            <div class="flex flex-1 items-center">
+              <div class="lg:w-4 lg:h-4 w-3 h-3 rounded-full bg-gray-200 relative ml-4 items-center ">
+              <svg class="lg:h-6 lg:w-5 w-4 h-5 text-orange-500 absolute top-0 -left-1 lg:-left-2" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+              </svg>
 
-        <div class="pt-6 px-6 text-orange-500 text-base"> فیلتر</div>
-        <div class="pt-6 px-6 text-orange-500 text-base flex items-center justify-between">
-          <span class="text-gray-500">برند محصول</span>
-          <svg class="h-4 w-4 text-red-500 cursor-pointer " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="18 15 12 9 6 15" />
-          </svg>
+              </div>
+              <span
+                class="text-gray-500 flex flex-1 px-3 w-full h-10 hover:bg-slate-200 rounded-md justify-between items-center text-sm lg:text-base mt-2 trasation-all duration-300 cursor-pointer">رنگ
+                محصول
+                <svg :class="!isOpenBrand ? 'rotate-[538deg]' : '' "
+                  class="h-3 w-3 lg:w-4 lg:h-4 text-red-500 cursor-pointer transation-all duration-700 " viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="18 15 12 9 6 15" />
+                </svg>
+              </span>
+            </div>
+          </div>
+          <!--!                    Acc #2 content                  -->
+          <div x-show="isOpenBrand === true" class="flex flex-1">
+            <ul x-data='{sort: 1 ,active:"bg-orange-300" ,acFont:"text-orange-900"}' class="px-12 py-3">
+              <li class="py-1 flex">
+                <div @click="sort = 1" :class="sort === 1 ? active : '' "
+                  class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
+                <span @click="sort = 1" :class="sort === 1 ? acFont : '' "
+                  class="cursor-pointer text-gray-700 text-xs lg:text-sm ">
+                  مشکی</span>
+              </li>
+              <li class="py-1 flex">
+                <div @click="sort = 2" :class="sort ===2 ? active : '' "
+                  class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
+                <span @click="sort = 2" :class="sort === 2 ? acFont : '' "
+                  class="cursor-pointer text-gray-700 text-xs lg:text-sm ">
+                  سفید</span>
+              </li>
+              <li class="py-1 flex">
+                <div @click="sort = 3" :class="sort ===3 ? active : '' "
+                  class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
+                <span @click="sort = 3" :class="sort === 3 ? acFont : '' "
+                  class="cursor-pointer text-gray-700 text-xs lg:text-sm ">زرد</span>
+              </li>
+              <li class="py-1 flex">
+                <div @click="sort = 4" :class="sort === 4 ? active : '' "
+                  class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
+                <span @click="sort = 4" :class="sort === 4 ? acFont : '' "
+                  class="cursor-pointer text-gray-700 text-xs lg:text-sm ">سبز</span>
+              </li>
+            </ul>
+          </div>
+          </div>
+          <!--!                                     Acc no 3                     -->
+          <div x-data="{isOpenBrand : true , active: 'rotate-180' }" class="flex flex-col">
+            <!--!                    Acc #3 header                   -->
+            <div @click="isOpenBrand = !isOpenBrand"
+              class="pt-6 px-2 lg:px-4 text-orange-500 text-base flex justify-start items-between flex-1 flex-col">
+              <div class="flex flex-1 items-center">
+                <div class="lg:w-4 lg:h-4 w-3 h-3 rounded-full bg-gray-200 relative ml-4 items-center ">
+                  <svg class="h-4 w-5 lg:w-6 lg:h-5 text-orange-500 absolute top-0.5 -left-2 " width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12" />
+                    <path d="M20 12v4h-4a2 2 0 0 1 0 -4h4" />
+                  </svg>
+                </div>
+                <span
+                  class="text-gray-500 flex flex-1 px-3 w-full h-10 hover:bg-slate-200 rounded-md justify-between items-center text-sm lg:text-base mt-2 trasation-all duration-300 cursor-pointer">
+                  محدوده قیمت
+                  <svg :class="!isOpenBrand ? 'rotate-[538deg]' : '' "
+                    class="h-3 w-3 lg:w-4 lg:h-4 text-red-500 cursor-pointer transation-all duration-700 " viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="18 15 12 9 6 15" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <!--!                    Acc #3 content                  -->
+            <div x-show="isOpenBrand === true" class="flex flex-1 ">
+              <ul x-data='{sort: 1 ,active:"bg-orange-300" ,acFont:"text-orange-900"}' class="px-12 py-3">
+                <li class="py-1 flex">
+                  <div @click="sort = 1" :class="sort === 1 ? active : '' "
+                    class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
+                  <span @click="sort = 1" :class="sort === 1 ? acFont : '' "
+                    class="cursor-pointer text-gray-700 text-xs lg:text-sm ">
+                    کمتر از 5 میلیون تومان</span>
+                </li>
+                <li class="py-1 flex">
+                  <div @click="sort = 2" :class="sort ===2 ? active : '' "
+                    class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
+                  <span @click="sort = 2" :class="sort === 2 ? acFont : '' "
+                    class="cursor-pointer text-gray-700 text-xs lg:text-sm ">
+                    5 الی 10 میلیون تومان</span>
+                </li>
+                <li class="py-1 flex">
+                  <div @click="sort = 3" :class="sort ===3 ? active : '' "
+                    class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
+                  <span @click="sort = 3" :class="sort === 3 ? acFont : '' "
+                    class="cursor-pointer text-gray-700 text-xs lg:text-sm ">10 الی 20 میلیون تومان</span>
+                </li>
+                <li class="py-1 flex">
+                  <div @click="sort = 4" :class="sort === 4 ? active : '' "
+                    class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
+                  <span @click="sort = 4" :class="sort === 4 ? acFont : '' "
+                    class="cursor-pointer text-gray-700 text-xs lg:text-sm ">بیشتر از 20 میلیون تومان</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <ul class="px-8 py-3 ">
-          <li class="py-1 flex">
-            <div class="w-4 h-4 border bg-stone-200 border-orange-300 rounded-sm ml-2 cursor-pointer"></div>
-
-
-            <span class="cursor-pointer"> اپل</span>
-          </li>
-          <li class="py-1 flex">
-            <div class="w-4 h-4 border bg-stone-200 border-orange-300 rounded-sm ml-2 cursor-pointer"></div>
-            <span class="cursor-pointer"> سامسونگ</span>
-          </li>
-          <li class="py-1 flex">
-            <div class="w-4 h-4 border bg-stone-200 border-orange-300 rounded-sm ml-2 cursor-pointer"></div>
-            <span class="cursor-pointer">شیایومی</span>
-          </li>
-          <li class="py-1 flex">
-            <div class="w-4 h-4 border bg-stone-200 border-orange-300 rounded-sm ml-2 cursor-pointer"></div>
-            <span class="cursor-pointer">هواوی</span>
-          </li>
-        </ul>
-
-        <div class="pt-10 px-6 text-gray-500 text-base flex items-center justify-between">
-          <span>محدوده قیمت</span>
-        <svg class="w-4 h-4 border bg-stone-200  rounded-sm ml-2 cursor-pointer" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-          fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" />
-          <polyline points="6 9 12 15 18 9" />
-        </svg>
-        </div>
-
-
-        <div class="pt-6 px-6 text-gray-500 text-base flex items-center justify-between">
-          <span>رنگ محصول</span>
-        <svg class="w-4 h-4 border bg-stone-200  rounded-sm ml-2 cursor-pointer" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-          fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" />
-          <polyline points="6 9 12 15 18 9" />
-        </svg>
-        </div>
-      </div>
-    </section>
+  </section>
 
     <!-- !...................sort section............... -->
 
     <section class="hidden md:flex bg-white col-span-9 rounded-lg justify-center items-center ">
-      <div x-data="{sort : 1 , activeClass : 'text-gray-800 font-bold'}" class=" w-full h-full flex items-center px-4 ">
+      <div x-data="{sort : 1 , activeClass : 'text-slate-900 font-bold'}" class=" w-full h-full flex items-center px-4">
         <button>
           <svg xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5 lg:h-7 lg:w-7 stroke-stone-100 bg-red-300 md:text-sm lg:text-base p-1 rounded-sm hover:bg-red-200 transation-all duration-200"
+            class="h-5 w-5 lg:h-7 lg:w-7 stroke-stone-100 bg-red-300 md:text-sm lg:text-base p-1 rounded-sm hover:bg-red-400 transation-all duration-200"
             fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
           </svg>
