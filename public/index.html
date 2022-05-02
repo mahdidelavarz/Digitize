@@ -10,8 +10,8 @@
 
 <body class="bg-stone-200">
 
-  <!-- App Bar -->
-  <section class="flex items-center justify-between mt-10  px-6 mb-6">
+  <!--!...................... App Bar................. -->
+  <section class="flex items-center justify-between mt-10  px-6 mb-6 md:hidden">
     <div class="cursor-pointer">Digitize</div>
     <div class="text-lg font-bold text-slate-800">ساعت هوشمند</div>
     <div class="h-7 w-7 md:h-8 md:w-8 lg:w-10 lg:h-10  bg-white rounded-lg  shadow-xl flex justify-center items-center">
@@ -22,8 +22,30 @@
     </div>
   </section>
 
-  <!-- Filter - sort mobile section -->
-  <section class="flex md:hidden justify-between items-center px-6 flex-row-reverse w-full mb-9">
+  <section class=" w-full h-20 bg-white shadow-lg pr-10 pl-7 items-center hidden md:flex justify-between fixed z-50">
+    <div class="w-1/2 h-full flex items-center ">
+      <h3 class=" font-extrabold  text-red-600 text-2xl mr-2"> Digi<span class="text-gray-700 text-xl">tize</span></h3>
+      <ul class=" flex items-center justify-between w-full h-full text-xs md:text-sm lg:text-base mr-4">
+        <li class="h-full flex items-center justify-center text-gray-700 cursor-pointer w-20 ">خانه</li>
+        <li class="h-full flex items-center justify-center text-gray-700 cursor-pointer w-28 ">تلفن همراه</li>
+        <li class="h-full flex items-center justify-center text-gray-700 cursor-pointer w-20 "> لپ تاپ </li>
+        <li class="h-full flex items-center justify-center text-gray-700 cursor-pointer w-36 ">ساعت هوشمند</li>
+      </ul>
+    </div>
+    <div class="w-1/3 relative">
+      <input type="text"
+        class="bg-stone-100 w-full p-2 lg:p-3 pr-10 lg:pr-10 border-none outline-none shadow-gray-300 text-xs flex justify-center items-center rounded shadow-md "
+        placeholder='جستجوی نام محصول , نام برند و ...'>
+      <svg class="h-6 w-6  text-gray-500 absolute top-1 lg:top-2 right-2 cursor-pointer" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
+    </div>
+  </section>
+
+  <!--! Filter ..................- sort mobile section -->
+  <section class="flex md:hidden justify-between items-center px-6 flex-row-reverse w-full mb-8">
     <div class=" bg-white flex  justify-center items-center w-1/2 p-2 rounded-md mr-1 cursor-pointer">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-gray-400 md:text-sm lg:text-base" fill="none"
         viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -41,13 +63,13 @@
     </div>
   </section>
 
-
-  <section class="grid grid-cols-12 md:grid-rows-[50px_minmax(500px,_1fr)] md:gap-4 p-3 md:px-6">
+  <section class="w-full h-20 hidden md:block"></section>
     <!-- !.................side bar.................... -->
-
-    <section class=" hidden md:block bg-stone-200 col-span-3 row-span-2 rounded-lg  ">
-      <div class="bg-white w-full pt-10 pb-28 rounded-xl ">
-        <div class="pt-6 lg:px-6 px-3 text-orange-500 lg:text-base text-sm"> دسته بندی </div>
+  <section class="grid grid-cols-12 md:grid-rows-[50px_minmax(500px,_1fr)] md:gap-4 p-3 md:px-6">
+    <section
+      class=" hidden md:block bg-stone-200 col-span-3 row-span-2 rounded-r-xl sticky max-h-[100vh] overflow-scroll">
+      <div class="bg-white w-full pt-10 pb-28 rounded-r-xl sticky">
+        <div class="pt-2 lg:px-6 px-3 text-orange-500 lg:text-base text-sm"> دسته بندی </div>
         <ul class="pl-2 pr-4 lg:px-8 py-3 ">
           <li class=" flex flex-1">
             <div class="w-3 h-3 lg:w-5 lg:h-5 rounded-full bg-gray-300 relative ml-4">
@@ -100,7 +122,8 @@
           <!--!                                 Acc No 1                       -->
           <div x-data="{isOpenBrand : true , active: 'rotate-180' }" class="flex flex-col">
             <!--!                    Acc #1 header                   -->
-            <div @click="isOpenBrand = !isOpenBrand" class="pt-6 px-2 lg:px-4 text-orange-500 text-base flex justify-start items-between flex-1 flex-col">
+            <div @click="isOpenBrand = !isOpenBrand"
+              class="pt-6 px-2 lg:px-4 text-orange-500 text-base flex justify-start items-between flex-1 flex-col">
               <div class="flex flex-1 items-center">
                 <div class="lg:w-4 lg:h-4 w-3 h-3 rounded-full bg-gray-200 relative ml-4 items-center ">
                   <svg class="lg:h-5 lg:w-5  h-4 w-5 stroke-orange-400 absolute lg:top-1 lg:-left-3 top-0 right-[3px]"
@@ -115,16 +138,18 @@
                 <span
                   class="text-gray-500 flex flex-1 px-3 w-full h-10 hover:bg-slate-200 rounded-md justify-between items-center text-sm lg:text-base mt-2 trasation-all duration-300 cursor-pointer">برند
                   محصول
-                  <svg :class="!isOpenBrand ? 'rotate-[538deg]' : '' " class="h-3 w-3 lg:w-4 lg:h-4 text-red-500 cursor-pointer transation-all duration-700 " viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="18 15 12 9 6 15" />   
+                  <svg :class="!isOpenBrand ? 'rotate-[538deg]' : '' "
+                    class="h-3 w-3 lg:w-4 lg:h-4 text-red-500 cursor-pointer transation-all duration-700 "
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="18 15 12 9 6 15" />
                   </svg>
                 </span>
               </div>
             </div>
             <!--!                    Acc #1 content                  -->
             <div x-show="isOpenBrand === true" class="flex flex-1">
-              <ul x-data='{sort: 1 ,active:"bg-orange-300" ,acFont:"text-orange-900"}' class="px-12 py-3">
+              <ul x-data='{sort: 1 ,active:"bg-orange-300" ,acFont:"text-orange-900"}' class="pr-7 py-3 lg:pr-10">
                 <li class="py-1 flex">
                   <div @click="sort = 1" :class="sort === 1 ? active : '' "
                     class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
@@ -155,61 +180,62 @@
             </div>
           </div>
           <!--!                                    Acc no 2                      -->
-          <div  x-data="{isOpenBrand : true , active: 'rotate-180' }" class="flex flex-col">
-          <!--!                    Acc #2 header                   -->
-          <div @click="isOpenBrand = !isOpenBrand"
-            class="pt-6 px-2 lg:px-4 text-orange-500 text-base flex justify-start items-between flex-1 flex-col">
-            <div class="flex flex-1 items-center">
-              <div class="lg:w-4 lg:h-4 w-3 h-3 rounded-full bg-gray-200 relative ml-4 items-center ">
-              <svg class="lg:h-6 lg:w-5 w-4 h-5 text-orange-500 absolute top-0 -left-1 lg:-left-2" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-              </svg>
+          <div x-data="{isOpenBrand : true , active: 'rotate-180' }" class="flex flex-col">
+            <!--!                    Acc #2 header                   -->
+            <div @click="isOpenBrand = !isOpenBrand"
+              class="pt-6 px-2 lg:px-4 text-orange-500 text-base flex justify-start items-between flex-1 flex-col">
+              <div class="flex flex-1 items-center">
+                <div class="lg:w-4 lg:h-4 w-3 h-3 rounded-full bg-gray-200 relative ml-4 items-center ">
+                  <svg class="lg:h-6 lg:w-5 w-4 h-5 text-orange-500 absolute top-0 -left-1 lg:-left-2" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                  </svg>
 
+                </div>
+                <span
+                  class="text-gray-500 flex flex-1 px-3 w-full h-10 hover:bg-slate-200 rounded-md justify-between items-center text-sm lg:text-base mt-2 trasation-all duration-300 cursor-pointer">رنگ
+                  محصول
+                  <svg :class="!isOpenBrand ? 'rotate-[538deg]' : '' "
+                    class="h-3 w-3 lg:w-4 lg:h-4 text-red-500 cursor-pointer transation-all duration-700 "
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="18 15 12 9 6 15" />
+                  </svg>
+                </span>
               </div>
-              <span
-                class="text-gray-500 flex flex-1 px-3 w-full h-10 hover:bg-slate-200 rounded-md justify-between items-center text-sm lg:text-base mt-2 trasation-all duration-300 cursor-pointer">رنگ
-                محصول
-                <svg :class="!isOpenBrand ? 'rotate-[538deg]' : '' "
-                  class="h-3 w-3 lg:w-4 lg:h-4 text-red-500 cursor-pointer transation-all duration-700 " viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="18 15 12 9 6 15" />
-                </svg>
-              </span>
             </div>
-          </div>
-          <!--!                    Acc #2 content                  -->
-          <div x-show="isOpenBrand === true" class="flex flex-1">
-            <ul x-data='{sort: 1 ,active:"bg-orange-300" ,acFont:"text-orange-900"}' class="px-12 py-3">
-              <li class="py-1 flex">
-                <div @click="sort = 1" :class="sort === 1 ? active : '' "
-                  class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
-                <span @click="sort = 1" :class="sort === 1 ? acFont : '' "
-                  class="cursor-pointer text-gray-700 text-xs lg:text-sm ">
-                  مشکی</span>
-              </li>
-              <li class="py-1 flex">
-                <div @click="sort = 2" :class="sort ===2 ? active : '' "
-                  class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
-                <span @click="sort = 2" :class="sort === 2 ? acFont : '' "
-                  class="cursor-pointer text-gray-700 text-xs lg:text-sm ">
-                  سفید</span>
-              </li>
-              <li class="py-1 flex">
-                <div @click="sort = 3" :class="sort ===3 ? active : '' "
-                  class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
-                <span @click="sort = 3" :class="sort === 3 ? acFont : '' "
-                  class="cursor-pointer text-gray-700 text-xs lg:text-sm ">زرد</span>
-              </li>
-              <li class="py-1 flex">
-                <div @click="sort = 4" :class="sort === 4 ? active : '' "
-                  class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
-                <span @click="sort = 4" :class="sort === 4 ? acFont : '' "
-                  class="cursor-pointer text-gray-700 text-xs lg:text-sm ">سبز</span>
-              </li>
-            </ul>
-          </div>
+            <!--!                    Acc #2 content                  -->
+            <div x-show="isOpenBrand === true" class="flex flex-1">
+              <ul x-data='{sort: 1 ,active:"bg-orange-300" ,acFont:"text-orange-900"}' class="pr-7 py-3 lg:pr-10">
+                <li class="py-1 flex">
+                  <div @click="sort = 1" :class="sort === 1 ? active : '' "
+                    class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
+                  <span @click="sort = 1" :class="sort === 1 ? acFont : '' "
+                    class="cursor-pointer text-gray-700 text-xs lg:text-sm ">
+                    مشکی</span>
+                </li>
+                <li class="py-1 flex">
+                  <div @click="sort = 2" :class="sort ===2 ? active : '' "
+                    class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
+                  <span @click="sort = 2" :class="sort === 2 ? acFont : '' "
+                    class="cursor-pointer text-gray-700 text-xs lg:text-sm ">
+                    سفید</span>
+                </li>
+                <li class="py-1 flex">
+                  <div @click="sort = 3" :class="sort ===3 ? active : '' "
+                    class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
+                  <span @click="sort = 3" :class="sort === 3 ? acFont : '' "
+                    class="cursor-pointer text-gray-700 text-xs lg:text-sm ">زرد</span>
+                </li>
+                <li class="py-1 flex">
+                  <div @click="sort = 4" :class="sort === 4 ? active : '' "
+                    class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
+                  <span @click="sort = 4" :class="sort === 4 ? acFont : '' "
+                    class="cursor-pointer text-gray-700 text-xs lg:text-sm ">سبز</span>
+                </li>
+              </ul>
+            </div>
           </div>
           <!--!                                     Acc no 3                     -->
           <div x-data="{isOpenBrand : true , active: 'rotate-180' }" class="flex flex-col">
@@ -218,8 +244,9 @@
               class="pt-6 px-2 lg:px-4 text-orange-500 text-base flex justify-start items-between flex-1 flex-col">
               <div class="flex flex-1 items-center">
                 <div class="lg:w-4 lg:h-4 w-3 h-3 rounded-full bg-gray-200 relative ml-4 items-center ">
-                  <svg class="h-4 w-5 lg:w-6 lg:h-5 text-orange-500 absolute top-0.5 -left-2 " width="24" height="24" viewBox="0 0 24 24"
-                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <svg class="h-4 w-5 lg:w-6 lg:h-5 text-orange-500 absolute top-0.5 -left-2 " width="24" height="24"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" />
                     <path
                       d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12" />
@@ -230,8 +257,9 @@
                   class="text-gray-500 flex flex-1 px-3 w-full h-10 hover:bg-slate-200 rounded-md justify-between items-center text-sm lg:text-base mt-2 trasation-all duration-300 cursor-pointer">
                   محدوده قیمت
                   <svg :class="!isOpenBrand ? 'rotate-[538deg]' : '' "
-                    class="h-3 w-3 lg:w-4 lg:h-4 text-red-500 cursor-pointer transation-all duration-700 " viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    class="h-3 w-3 lg:w-4 lg:h-4 text-red-500 cursor-pointer transation-all duration-700 "
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
                     <polyline points="18 15 12 9 6 15" />
                   </svg>
                 </span>
@@ -239,43 +267,43 @@
             </div>
             <!--!                    Acc #3 content                  -->
             <div x-show="isOpenBrand === true" class="flex flex-1 ">
-              <ul x-data='{sort: 1 ,active:"bg-orange-300" ,acFont:"text-orange-900"}' class="px-12 py-3">
+              <ul x-data='{sort: 1 ,active:"bg-orange-300" ,acFont:"text-orange-900"}' class="pr-7 pl-1 py-3 lg:pr-10">
                 <li class="py-1 flex">
                   <div @click="sort = 1" :class="sort === 1 ? active : '' "
                     class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
                   <span @click="sort = 1" :class="sort === 1 ? acFont : '' "
                     class="cursor-pointer text-gray-700 text-xs lg:text-sm ">
-                    کمتر از 5 میلیون تومان</span>
+                    کمتر از 1 میلیون تومان</span>
                 </li>
                 <li class="py-1 flex">
                   <div @click="sort = 2" :class="sort ===2 ? active : '' "
                     class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
                   <span @click="sort = 2" :class="sort === 2 ? acFont : '' "
                     class="cursor-pointer text-gray-700 text-xs lg:text-sm ">
-                    5 الی 10 میلیون تومان</span>
+                    1 الی 5 میلیون تومان</span>
                 </li>
                 <li class="py-1 flex">
                   <div @click="sort = 3" :class="sort ===3 ? active : '' "
                     class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
                   <span @click="sort = 3" :class="sort === 3 ? acFont : '' "
-                    class="cursor-pointer text-gray-700 text-xs lg:text-sm ">10 الی 20 میلیون تومان</span>
+                    class="cursor-pointer text-gray-700 text-xs lg:text-sm ">5 الی 10 میلیون تومان</span>
                 </li>
                 <li class="py-1 flex">
                   <div @click="sort = 4" :class="sort === 4 ? active : '' "
                     class="w-4 h-4 border bg-white border-orange-200 rounded-sm ml-2 cursor-pointer"></div>
                   <span @click="sort = 4" :class="sort === 4 ? acFont : '' "
-                    class="cursor-pointer text-gray-700 text-xs lg:text-sm ">بیشتر از 20 میلیون تومان</span>
+                    class="cursor-pointer text-gray-700 text-xs lg:text-sm ">بیش از 10 میلیون تومان</span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-  </section>
+    </section>
 
     <!-- !...................sort section............... -->
 
-    <section class="hidden md:flex bg-white col-span-9 rounded-lg justify-center items-center ">
-      <div x-data="{sort : 1 , activeClass : 'text-slate-900 font-bold'}" class=" w-full h-full flex items-center px-4">
+    <section class="hidden md:flex bg-white col-span-9 rounded-lg justify-center items-center">
+      <div x-data="{sort : 1 , activeClass : 'text-slate-900'}" class=" w-full h-full flex items-center px-4">
         <button>
           <svg xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5 lg:h-7 lg:w-7 stroke-stone-100 bg-red-300 md:text-sm lg:text-base p-1 rounded-sm hover:bg-red-400 transation-all duration-200"
@@ -306,7 +334,7 @@
       </div>
     </section>
     <!-- !...................product section............. -->
-    <section class=" bg-stone-200  col-span-12 md:col-span-9 rounded-lg pt-3">
+    <section class=" bg-stone-200  col-span-12 md:col-span-9 rounded-lg pt-3 z-10 mb-8">
 
       <div x-data="{ products:[
           {id: 1 , title: 'ساعت هوشمند اپل 4' , price: '1,250,000 تومان'} ,
@@ -398,6 +426,41 @@
     </section>
   </section>
 
+  <!-- ! footer section  -->
+  <section class=" fixed bottom-0 left-0 right-0 z-50 md:hidden">
+    <div x-data="{active:1 , activeTab: 'text-purple-900 font-bold'}" class=" pr-3 md:pr-8 lg:pr-32 flex  items-center py-2 bg-white rounded-t-2xl shadow-[0_-4px_8px_0_rgba(0,0,0,0.3)]">
+      <a @click="active = 1"   href="#" class="flex flex-1  justify-start items-center py-2 text-purple-900">
+        <svg :class="active === 1 ? activeTab : '' "  xmlns="http://www.w3.org/2000/svg" class="h-4 w-7 text-gray-500 sm:w-9 sm:h-6 lg:w-11 lg:h-8 s:text-white" viewBox="0 0 20 20" fill="currentColor">
+          <path
+            d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+        <span x-show="active === 1" class="text-xs md:text-base lg:text-lg">خانه</span>
+      </a>
+      <a @click="active = 2"  href="#" class="flex  flex-1 justify-start items-center py-2">
+        <svg :class="active === 2 ? activeTab : ''" xmlns="http://www.w3.org/2000/svg" class="sm:h-6 sm:w-9 w-7 h-4 text-gray-500 lg:w-11 lg:h-8" viewBox="0 0 20 20" fill="currentColor">
+          <path
+            d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+        </svg>
+        <span x-show="active === 2" class="text-xs  md:text-base lg:text-lg">دسته بندی</span>
+      </a>
+      <a @click="active = 3"  href="#" class="flex  flex-1  justify-start items-center py-2">
+        <svg :class="active === 3 ? activeTab : ''" xmlns="http://www.w3.org/2000/svg" class="sm:h-6 sm:w-9 h-4 w-7 text-gray-500 lg:w-11 lg:h-8" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+            clip-rule="evenodd" />
+        </svg>
+        <span x-show="active === 3" class="text-xs  md:text-base lg:text-lg">سبد خرید</span>
+      </a>
+      <a @click="active = 4"  href="#" class="flex  flex-1  justify-start items-center py-2">
+        <svg :class="active === 4 ? activeTab : ''" xmlns="http://www.w3.org/2000/svg" class="sm:h-6 sm:w-9 h-4 w-7 text-gray-500 lg:w-11 lg:h-8" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+            clip-rule="evenodd" />
+        </svg>
+        <span x-show="active === 4" class="text-xs md:text-base lg:text-lg">علاقمندی ها</span>
+      </a>
+    </div>
+  </section>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
 
