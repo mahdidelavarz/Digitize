@@ -1,0 +1,217 @@
+<html lang="fr" dir="rtl">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./build/tailwind.css">
+ <title>Shopping Cart</title>
+</head>
+<body class="bg-stone-200">
+   <!--!______________________________________ App Bar_____________________________________ -->
+  <section class="flex items-center justify-between mt-10  px-6 mb-6 md:hidden">
+    <div class="h-7 w-7 md:h-8 md:w-8 lg:w-10 lg:h-10  bg-white rounded-lg  shadow-xl flex justify-center items-center">
+    <svg class="h-6 w-6 stroke-gray-500 cursor-pointer" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+     fill="none" stroke-linecap="round" stroke-linejoin="round">
+     <path stroke="none" d="M0 0h24v24H0z" />
+     <polyline points="9 6 15 12 9 18" />
+    </svg>
+   </div>
+   <div class="text-lg font-bold text-slate-800">سبد خرید</div>
+   <div class="h-7 w-7 md:h-8 md:w-8 lg:w-10 lg:h-10  bg-white rounded-lg  shadow-xl flex justify-center items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="cursor-pointer h-5 w-5 lg:h-6 lg:w-6 stroke-gray-500" fill="none"
+     viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+     <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+    </svg>
+   </div>
+  </section>
+  <section class=" w-full h-20 bg-white shadow-lg pr-10 pl-7 items-center hidden md:flex justify-between fixed z-50">
+   <div class="w-1/2 h-full flex items-center ">
+    <h3 class=" font-extrabold  text-red-600 text-2xl mr-2"> Digi<span class="text-gray-700 text-xl">tize</span></h3>
+    <ul class=" flex items-center justify-between w-full h-full text-xs md:text-sm lg:text-base mr-4">
+     <li class="h-full flex items-center justify-center text-gray-700 cursor-pointer w-20 ">خانه</li>
+     <li class="h-full flex items-center justify-center text-gray-700 cursor-pointer w-28 ">تلفن همراه</li>
+     <li class="h-full flex items-center justify-center text-gray-700 cursor-pointer w-20 "> لپ تاپ </li>
+     <li class="h-full flex items-center justify-center text-gray-700 cursor-pointer w-36 ">ساعت هوشمند</li>
+    </ul>
+   </div>
+   <div class="w-1/3 relative">
+    <input type="text"
+     class="bg-stone-100 w-full p-2 lg:p-3 pr-10 lg:pr-10 border-none outline-none shadow-gray-300 text-xs flex justify-center items-center rounded shadow-md "
+     placeholder='جستجوی نام محصول , نام برند و ...'>
+    <svg class="h-6 w-6  text-gray-500 absolute top-1 lg:top-2 right-2 cursor-pointer" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+     <circle cx="11" cy="11" r="8" />
+     <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </svg>
+   </div>
+  </section>
+
+  <!-- !_______________________________cart items___________________________________ -->
+<section class="w-full h-auto p-6 flex flex-col gap-4">
+ <div class="w-full h-auto py-2 pl-2 flex justify-between items-center relative bg-white rounded-md">
+  <svg class="h-6 w-6 text-red-800 absolute top-2 left-2 cursor-pointer opacity-70 hover:opacity-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+   stroke-linecap="round" stroke-linejoin="round">
+   <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+   <line x1="9" y1="9" x2="15" y2="15" />
+   <line x1="15" y1="9" x2="9" y2="15" />
+  </svg>
+  <div class="flex gap-2">
+   <div class="w-24 h-24">
+ <img src="../assets/imsges/watch6.png" alt="watch" class="w-full h-full object-cover">
+</div>
+<div class="flex flex-col py-4 items-start">
+ <span class="text-sm ">ساعت هوشمند اپل سری 6</span>
+ <span class="text-orange-500 mt-8 text-sm">2,250,000 تومان</span>
+</div></div>
+
+<div class="w-[4.3rem] sm:w-28 h-full flex justify-between items-center mt-12 ml-2 sm:ml-8">
+<span class="bg-green-300 p-1 rounded-full cursor-pointer">
+ <svg class="h-3 w-3 sm:w-4 sm:h-4 text-green-800" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+  fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" />
+  <line x1="12" y1="5" x2="12" y2="19" />
+  <line x1="5" y1="12" x2="19" y2="12" />
+ </svg>
+</span>
+<span class="border-2 border-orange-400 p-1 sm:p-2 flex justify-center items-center rounded-md text-stone-700">1</span>
+<span class="bg-red-300 p-1 rounded-full cursor-pointer">
+ <svg class="h-3 w-3 sm:w-4 sm:h-4 text-red-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+  stroke-linecap="round" stroke-linejoin="round">
+  <line x1="5" y1="12" x2="19" y2="12" />
+ </svg>
+</span>
+</div>
+ </div>
+  <div class="w-full h-auto py-2 pl-2 flex justify-between items-center relative bg-white rounded-md">
+   <svg class="h-6 w-6 text-red-800 absolute top-2 left-2 cursor-pointer opacity-70 hover:opacity-100" viewBox="0 0 24 24"
+    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+    <line x1="9" y1="9" x2="15" y2="15" />
+    <line x1="15" y1="9" x2="9" y2="15" />
+   </svg>
+   <div class="flex gap-2">
+    <div class="w-24 h-24">
+     <img src="../assets/imsges/watch6.png" alt="watch" class="w-full h-full object-cover">
+    </div>
+    <div class="flex flex-col py-4 items-start">
+     <span class="text-sm ">ساعت هوشمند اپل سری 6</span>
+     <span class="text-orange-500 mt-8 text-sm">2,250,000 تومان</span>
+    </div>
+   </div>
+  
+   <div class="w-[4.3rem] sm:w-28 h-full flex justify-between items-center mt-12 ml-2 sm:ml-8">
+    <span class="bg-green-300 p-1 rounded-full cursor-pointer">
+     <svg class="h-3 w-3 sm:w-4 sm:h-4 text-green-800" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+      stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="12" y1="5" x2="12" y2="19" />
+      <line x1="5" y1="12" x2="19" y2="12" />
+     </svg>
+    </span>
+    <span
+     class="border-2 border-orange-400 p-1 sm:p-2 flex justify-center items-center rounded-md text-stone-700">1</span>
+    <span class="bg-red-300 p-1 rounded-full cursor-pointer">
+     <svg class="h-3 w-3 sm:w-4 sm:h-4 text-red-700" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5" y1="12" x2="19" y2="12" />
+     </svg>
+    </span>
+   </div>
+  </div>
+   <div class="w-full h-auto py-2 pl-2 flex justify-between items-center relative bg-white rounded-md">
+    <svg class="h-6 w-6 text-red-800 absolute top-2 left-2 cursor-pointer opacity-70 hover:opacity-100" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+     <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+     <line x1="9" y1="9" x2="15" y2="15" />
+     <line x1="15" y1="9" x2="9" y2="15" />
+    </svg>
+    <div class="flex gap-2">
+     <div class="w-24 h-24">
+      <img src="../assets/imsges/watch6.png" alt="watch" class="w-full h-full object-cover">
+     </div>
+     <div class="flex flex-col py-4 items-start">
+      <span class="text-sm ">ساعت هوشمند اپل سری 6</span>
+      <span class="text-orange-500 mt-8 text-sm">2,250,000 تومان</span>
+     </div>
+    </div>
+   
+    <div class="w-[4.3rem] sm:w-28 h-full flex justify-between items-center mt-12 ml-2 sm:ml-8">
+     <span class="bg-green-300 p-1 rounded-full cursor-pointer">
+      <svg class="h-3 w-3 sm:w-4 sm:h-4 text-green-800" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+       stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+       <path stroke="none" d="M0 0h24v24H0z" />
+       <line x1="12" y1="5" x2="12" y2="19" />
+       <line x1="5" y1="12" x2="19" y2="12" />
+      </svg>
+     </span>
+     <span
+      class="border-2 border-orange-400 p-1 sm:p-2 flex justify-center items-center rounded-md text-stone-700">1</span>
+     <span class="bg-red-300 p-1 rounded-full cursor-pointer">
+      <svg class="h-3 w-3 sm:w-4 sm:h-4 text-red-700" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+       stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+       <line x1="5" y1="12" x2="19" y2="12" />
+      </svg>
+     </span>
+    </div>
+   </div>
+   <div class="w-full h-auto flex flex-col relative bg-white rounded-md px-8 py-4 mt-8 ">
+    <div class="w-full flex justify-between">
+     <span class="text-lg">مجموع قیمت :</span>
+     <span class="text-orange-600 text-lg">6,750,000 تومان</span>
+    </div>
+    <div class="w-full flex justify-between items-center mt-4">
+     <span class="text-sm">کد تخفیف دارید؟</span>
+     <input type="text" class="bg-stone-100 shadow-md shadow-stone-500 outline-none py-1 px-4" dir="ltr">
+    </div>
+   </div>
+</section>
+<!-- !_____________shopping button_____________ -->
+<div class=" mb-12 px-8 py-4 flex justify-center items-center  ">
+ <button class="btn w-full h-10 bg-orange-500 text-slate-100 rounded-md">
+  ادامه فرآیند خرید
+ </button>
+</div>
+ <!-- ! footer section  -->
+ <section class=" fixed bottom-0 left-0 right-0 z-50 md:hidden">
+  <div x-data="{active:1 , activeTab: 'text-purple-900 font-bold'}"
+   class=" pr-3 md:pr-8 lg:pr-32 flex  items-center py-2 bg-white rounded-t-2xl shadow-[0_-4px_8px_0_rgba(0,0,0,0.3)]">
+   <a @click="active = 1" href="#" class="flex flex-1  justify-start items-center py-2 text-purple-900">
+    <svg :class="active === 1 ? activeTab : '' " xmlns="http://www.w3.org/2000/svg"
+     class="h-4 w-7 text-gray-500 sm:w-9 sm:h-6 lg:w-11 lg:h-8 s:text-white" viewBox="0 0 20 20" fill="currentColor">
+     <path
+      d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+    </svg>
+    <span x-show="active === 1" class="text-xs md:text-base lg:text-lg">خانه</span>
+   </a>
+   <a @click="active = 2" href="#" class="flex  flex-1 justify-start items-center py-2">
+    <svg :class="active === 2 ? activeTab : ''" xmlns="http://www.w3.org/2000/svg"
+     class="sm:h-6 sm:w-9 w-7 h-4 text-gray-500 lg:w-11 lg:h-8" viewBox="0 0 20 20" fill="currentColor">
+     <path
+      d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+    </svg>
+    <span x-show="active === 2" class="text-xs  md:text-base lg:text-lg">دسته بندی</span>
+   </a>
+   <a @click="active = 3" href="#" class="flex  flex-1  justify-start items-center py-2">
+    <svg :class="active === 3 ? activeTab : ''" xmlns="http://www.w3.org/2000/svg"
+     class="sm:h-6 sm:w-9 h-4 w-7 text-gray-500 lg:w-11 lg:h-8" viewBox="0 0 20 20" fill="currentColor">
+     <path fill-rule="evenodd"
+      d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+      clip-rule="evenodd" />
+    </svg>
+    <span x-show="active === 3" class="text-xs  md:text-base lg:text-lg">سبد خرید</span>
+   </a>
+   <a @click="active = 4" href="#" class="flex  flex-1  justify-start items-center py-2">
+    <svg :class="active === 4 ? activeTab : ''" xmlns="http://www.w3.org/2000/svg"
+     class="sm:h-6 sm:w-9 h-4 w-7 text-gray-500 lg:w-11 lg:h-8" viewBox="0 0 20 20" fill="currentColor">
+     <path fill-rule="evenodd"
+      d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+      clip-rule="evenodd" />
+    </svg>
+    <span x-show="active === 4" class="text-xs md:text-base lg:text-lg">علاقمندی ها</span>
+   </a>
+  </div>
+ </section>
+
+   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+</html>
